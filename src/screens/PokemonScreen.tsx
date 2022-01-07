@@ -3,13 +3,14 @@ import { StyleSheet, Text, View, TouchableOpacity, Image, ActivityIndicator } fr
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParams } from '../navigator/Navigation';
 
-// import Icon from 'react-native-vector-icon/Ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { FadeInImage } from '../components/FadeInImage';
 import { usePokemon } from '../hooks/usePokemon';
 import { PokemonDetails } from '../components/PokemonDetails';
-import { upperCase } from '../helpers/toUppercase';
 
+import { upperCase } from '../helpers/toUppercase';
 
 interface Props extends StackScreenProps<RootStackParams, 'PokemonScreen'> { };
 
@@ -25,11 +26,10 @@ export const PokemonScreen = ({ route, navigation }: Props) => {
           onPress={() => navigation.pop()}
           style={{
             ...styles.btnButton,
-            top: top + 20
+            top: top + 15
           }}
         >
-          <Text style={{ fontSize: 15 }}>Atras</Text>
-          {/* <Icon name='arrow-back-outline' color="white" size={35} /> */}
+          <Icon name='arrow-back-outline' color="white" size={30} />
         </TouchableOpacity>
         <Text
           style={{
